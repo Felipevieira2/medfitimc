@@ -48,8 +48,8 @@ export default function Resultado() {
             
             <div className="flex flex-wrap">
               <div className='mt-12 font-medium'>
-                <p className="font-thin">{lead.textResult1}</p><br></br>
-                <p className="font-thin">{lead.textResult2}</p>
+                <p className="text-md">{lead.textResult1}</p><br></br>
+                <p className="text-md">{lead.textResult2}</p>
               </div>
               <table className="table-responsive mt-8 text-center w-full rounded">
                 <thead>
