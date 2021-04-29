@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="flex flex-col  min-h-screen p-24 bg-gradient-to-r from-blue-100">
+    <div className="p-4 bg-gradient-to-r from-blue-100">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2">
         <div className="items-center flex flex-wrap">         
           <div className="w-full md:w-6/12 ml-auto mr-auto px-4">
               <div className="md:pr-12">
@@ -62,7 +62,7 @@ export default function Home() {
               <div className="w-full md:w-6/12 ml-auto mr-auto px-4">
                 <img className="max-w-full rounded-lg shadow-lg" src="/imgs/imc.jpg"></img>
               </div>
-              <div className="mt-12 w-full">
+              <div className="mt-12 w-full sm:items-center">
                 <a href="#form" target="_self">
                 <button className=" bg-blue-300 text-xl font-bold 
                       px-9 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mb-1 
