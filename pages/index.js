@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <div className="p-4 bg-gradient-to-r from-blue-100">
       <Head>
-        <title>Create Next App</title>
+        <title>IMC calculo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto px-2">
         <div className="items-center flex flex-wrap">         
           <div className="w-full md:w-6/12 ml-auto mr-auto px-4">
               <div className="md:pr-12">
-                  <div className="p-4 text-center inline-flex items-center justify-center w-64 mb-16 shadow-md rounded-sm">
+                  <div className="p-4 text-center inline-flex items-center justify-center w-64 mb-16 shadow-sm rounded-sm">
                     <a href="https://medfitpaulista.com.br/" target="_blank">
                       <img src="/imgs/logo.png"></img>
                     </a>                  
@@ -62,7 +62,7 @@ export default function Home() {
               <div className="w-full md:w-6/12 ml-auto mr-auto px-4">
                 <img className="max-w-full rounded-lg shadow-lg" src="/imgs/imc.jpg"></img>
               </div>
-              <div className="mt-12 w-full sm:items-center">
+              <div className="mt-12 w-full md:w-6/12 ml-auto mr-auto px-4">
                 <a href="#form" target="_self">
                 <button className=" bg-blue-300 text-xl font-bold 
                       px-9 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mb-1 
