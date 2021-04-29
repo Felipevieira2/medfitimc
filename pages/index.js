@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React, { useCallback, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { useLocalStorage } from './utils/localStorage'
+
 
 export default function Home() {
   const [nome, setNome ] = React.useState(''); 
