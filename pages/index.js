@@ -70,7 +70,7 @@ export default function Home() {
                 </a>
                       
               </div>           
-              <div id="form"  className="bg-white lg:w-5/12 md:6/12 w-10/12 m-auto my-10 shadow-md mt-24">
+              <div id="form"  className="bg-white sm:w-12/12 lg:w-4/12 md:7/12 w-11/12 m-auto my-10 shadow-md mt-24">
                 <div className="py-8 px-8 rounded-xl">
                     <h1 className="font-medium text-2xl mt-3 text-center">Calculadora IMC</h1>
                     <form action="" className="mt-6">
