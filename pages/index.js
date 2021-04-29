@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div className="mt-8 w-full md:w-9/12">
             <a href="#form" target="_self">
-              <button className=" bg-blue-300 text-xl font-bold 
+              <button className=" bg-green-300 text-xl font-bold 
                       px-9 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mb-1 
                       transition-all duration-150"  type="button">Calcular IMC</button>
             </a>
