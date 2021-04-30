@@ -63,20 +63,20 @@ export default function Home() {
         <title>IMC calculo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto px-2">
+      <div className="container mx-auto md:px-14">
         <div className="items-center flex flex-wrap">
-          <div className="w-full md:w-6/12 ml-auto mr-auto">
-            <div className="md:pr-12">
-              <div className="p-4 text-center inline-flex items-center justify-center w-64 mb-16 shadow-sm rounded-sm">
-                <a href="https://medfitpaulista.com.br/" target="_blank">
-                  <img src="/imgs/logo.png"></img>
-                </a>
-              </div>
-              <h1 className="text-5xl font-bold">IMC</h1>
-              <h3 className="text-2xl text-gray-700 mt-8 font-light">Você sabe o seu peso ideal?</h3>
+          <div className="p-4 inline-flex items-center justify-center w-full mb-16 shadow-sm  rounded-sm">
+              <a href="https://medfitpaulista.com.br/" target="_blank">
+                <img src="/imgs/logo.png" className="w-64"></img>
+              </a>
+          </div>
+          <div className="md:w-12/12 lg:w-6/12 mx-auto">            
+            <div className="md:pr-4">            
+              <h1 className="text-5xl font-bold">Descubra seu IMC</h1>
+              <h3 className="text-2xl mt-8 font-bold">Você sabe o seu peso ideal?</h3>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">Entre muitos cuidados que devemos ter com nossa saúde e corpo, um deles é imprescindível: saber e manter o peso ideal. Sendo de grande importância para a promoção da saúde e prevenção de doenças.
                    Por isso, é importante conhecer seu Índice de Massa Corporal (IMC).</p>
-              <h3 className="text-2xl text-gray-700 mt-8 font-light">Alguns benefícios para a saúde: </h3>
+              <h3 className="text-2xl mt-8 font-medium">Alguns benefícios para a saúde: </h3>
               <ul className="list-none mt-6">
                 <li className="py-2">
                   <div className="flex items-center">
@@ -113,30 +113,8 @@ export default function Home() {
 
             </div>
           </div>
-
-          <div className="w-full md:w-6/12 ml-auto mr-auto mt-8">
-            <img className="max-w-full rounded-lg shadow-lg" src="/imgs/imc.jpg"></img>
-          </div>
-          <div className="mt-8 w-full md:w-9/12">
-            <a href="#form" target="_self">
-              <button className=" bg-green-300 text-xl font-bold 
-                px-9 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mb-1 
-                transition-all duration-150"  type="button">Calcular IMC</button>
-            </a>
-          </div>
-          <br></br>
-         
-          <div className="w-full md:w-6/12">
-            <div className="md:pr-12">
-              <h2 className="mt-8 text-3xl font-bold">O QUE É O IMC?</h2>
-              <p className="mt-8 text-lg leading-relaxed text-blueGray-500">O índice de massa corporal (IMC) é uma estimativa da gordura corporal com base na altura e no peso. Apesar de não medir a gordura corporal diretamente, a equação do IMC faz uma aproximação, indicando se a pessoa está com um peso insalubre ou saudável. </p>
-              <p className="mt-8 text-lg leading-relaxed text-blueGray-500">Além de adotado pela OMS (Organização Mundial de Saúde), que é usado para o diagnóstico do baixo peso, sobrepeso e da obesidade. 
-              O IMC pode ser facilmente calculado a partir de dois simples dados: peso e altura. A fórmula é simples:
-              </p>  
-              <div className="shadow-inner mt-12 bg-gray-200 p-4">IMC = peso (em quilos) ÷ altura² (em metros)</div>        
-            </div>
-          </div>
-          <div id="form" className="mt-24 bg-white sm:w-12/12 lg:w-4/12 md:7/12 shadow-md w-full  ml-auto mr-auto">
+          {/* Form imc */}
+          <div id="form" className="bg-white  md:w-6/12 mx-auto lg:w-4/12 md:6/12 shadow-md w-full ">
             <div className="py-8 px-8 rounded-xl">
               <h1 className="font-medium text-2xl mt-3 text-center">Calculadora IMC</h1>
               <form id="formIMC" action="/resultado" method="POST" className="mt-6">
@@ -172,7 +150,7 @@ export default function Home() {
                       e.target.value = e.target.value.replace(/(?=(\d{3})+(\D))\B/g, ".");
                       setAltura(e.target.value);
                     }}
-                    required className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                    required type="tel" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                     placeholder="Altura" />
                 </div>
                 <div className="my-5 text-sm">
@@ -187,15 +165,37 @@ export default function Home() {
                     e.target.value = e.target.value.replace(/(?=(\d{3})+(\D))\B/g, "$1,$2");
                     setPeso(e.target.value);
                   }}
-                    required className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                    required type="tel" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                     placeholder="peso" />
                 </div>
                 <button onClick={ (e) => {  onPressSubmit(e) } } type="button" className="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">Calcular</button>
               </form>
-
-
             </div>
           </div>
+          {/* fim/end form imc */}
+    
+          
+        </div>
+        {/* part 2 site */}
+        <div class="border-b-2 m-10 border-fuchsia-600"></div>
+        <div className="items-center flex flex-wrap ">     
+          <div className="md:w-12/12 lg:w-6/12 mx-auto">            
+            <h2 className="mt-8 text-3xl font-bold">O QUE É O IMC?</h2>
+            <p className="mt-8 text-lg leading-relaxed text-blueGray-500">O índice de massa corporal (IMC) é uma estimativa da gordura corporal com base na altura e no peso. Apesar de não medir a gordura corporal diretamente, a equação do IMC faz uma aproximação, indicando se a pessoa está com um peso insalubre ou saudável. </p>
+            <p className="mt-8 text-lg leading-relaxed text-blueGray-500">Além de adotado pela OMS (Organização Mundial de Saúde), que é usado para o diagnóstico do baixo peso, sobrepeso e da obesidade. 
+                  O IMC pode ser facilmente calculado a partir de dois simples dados: peso e altura. A fórmula é simples:
+            </p>  
+            <div className="shadow-inner mt-12 bg-gray-200 p-4">IMC = peso (em quilos) ÷ altura² (em metros)</div>        
+   
+          </div>
+          {/* Form imc */}
+     
+          <div className="md:w-12/12 lg:w-4/12 mx-auto mt-16">
+            <img className="max-w-full rounded-lg shadow-lg" src="/imgs/imc.jpg"></img>
+          </div>
+          {/* fim/end form imc */}
+    
+          
         </div>
       </div>
     </div>

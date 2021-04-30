@@ -13,11 +13,10 @@ export default function Resultado() {
     // window is accessible here.
     setLead(JSON.parse(window.localStorage.getItem('lead')))
    
-    if( !window.localStorage.getItem('lead') ) {
+    if(!window.localStorage.getItem('lead')) {
       router.push('/')
     }
-  
-    console.log(window.localStorage.getItem('lead'))
+
   }, []);
 
   const back = () => {
@@ -49,7 +48,8 @@ export default function Resultado() {
             <div className="flex flex-wrap">
               <div className='mt-12 font-medium'>
                 <p className="text-md">{lead.textResult1}</p><br></br>
-                <p className="text-md">{lead.textResult2}</p>
+                <p className="text-md">{lead.textResult2}</p><br></br>
+      
               </div>
               <table className="table-responsive mt-8 text-center w-full rounded">
                 <thead>
@@ -87,14 +87,18 @@ export default function Resultado() {
             </table>
             </div>
             <div className="mt-6 lg:pb-0  lg:w-full flex flex-wrap items-center">
-            
+            <p className="text-md font-light mt-12">Manter o imc dentro da classificação ideal, é de extrema importância pois previne doenças como diabetes, colesterol, problemas cardíacos, gordura no fígado, câncer entre outros. por isso é muito importante fazer exames regularmente e manter uma alimentação saudável.
+            </p><br></br>
+            <p className="text-md font-light">A medfit conta com um processo de emagrecimento com acompanhamento de médicos, e nutricionistas onde você realiza todos os exames clínicos sem pagar nada por isso. tudo utilizando seu convênio via reembolso.
+
+clique no botão abaixo e descubra como você pode emagrecer de 5 a 10kg nas próximas semanas com nosso acompanhamento.</p>
               <div className="w-full flex justify-end mt-3">
                 <button className=" bg-green-300 text-xl font-bold 
                   px-6 py-1 rounded shadow hover:shadow-lg outline-none focus:outline-none 
                   transition-all duration-120 "  type="button" onClick={back}>Refazer calculo</button>
               
               </div>  
-              <div className="w-full flex justify-end mt-7">
+              <div className="w-full flex justify-end mt-7 mt-12">
                 <a className="link mr-6" target="_blank" href="https://www.facebook.com/medfitpaulista/" data-tippy-content="@facebook_handle"><svg className="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Facebook</title>
                   <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path>
