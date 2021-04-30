@@ -24,19 +24,19 @@ export default function Home() {
     e.preventDefault();
     
     var imc = Number((peso.replace(',', '.') / (altura.replace(',', '.') * altura.replace(',', '.'))) ).toFixed(2);
-    let textResult1;
-    let textResult2;
+    let textResult1 = '';
+    let textResult2 = '';
 
     if( imc < 18.5 ) {
       textResult1 = "Infelizmente você está abaixo de seu peso.";
-      textResult2 = "O seu peso deveria ser no mínimo 67 kg. Assim, para ganhar peso de forma saudável e sem ganhar barriga, você deve continuar praticando atividade física, aumentar o volume das refeições e comer a cada 3 horas. "
+      // textResult2 = "O seu peso deveria ser no mínimo 67 kg. Assim, para ganhar peso de forma saudável e sem ganhar barriga, você deve continuar praticando atividade física, aumentar o volume das refeições e comer a cada 3 horas. "
     }
     if( imc >= 18.5 && imc < 24.9 ) {
       textResult1 = "Parabens! Você está no seu peso ideal.";
-      textResult2 = "De acordo com as informações passadas, o seu peso pode variar entre 67 kg e 90 kg. "
+      // textResult2 = "De acordo com as informações passadas, o seu peso pode variar entre 67 kg e 90 kg. "
     }else if( imc >= 24.9  && imc <= 30 ) {
       textResult1 = "Infelizmente você está acima do peso.";
-      textResult2 = "O seu peso ideal pode variar entre 67 kg e 90 kg por isso para emagrecer com saúde é importante comer mais frutas e verduras além de praticar exercício físico entre 2 e 3 vezes por semana, ingerindo 3035 calorias por dia"
+      // textResult2 = "O seu peso ideal pode variar entre 67 kg e 90 kg por isso para emagrecer com saúde é importante comer mais frutas e verduras além de praticar exercício físico entre 2 e 3 vezes por semana, ingerindo 3035 calorias por dia"
     }else if( imc >= 30.0 && imc <= 34.9 ) {
       textResult1 = "Infelizmente você está com Obesidade";  
       textResult2 = "Você deve ainda falar com seu médico para fazer exames de sangue para saber se o seu colesterol e triglicerídeos estão bem. Um nutricionista também pode te ajudar a emagrecer comendo bem, mas além da dieta é também importante fazer exercícios físicos bem orientado por um preparador físico para emagrecer mais rápido."    
@@ -62,6 +62,7 @@ export default function Home() {
       <Head>
         <title>IMC calculo</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
       </Head>
       <div className="container mx-auto md:px-14">
         <div className="items-center flex flex-wrap">
