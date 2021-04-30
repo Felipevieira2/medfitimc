@@ -65,58 +65,19 @@ export default function Home() {
       </Head>
       <div className="container mx-auto md:px-14">
         <div className="items-center flex flex-wrap">
-          <div className="p-4 inline-flex items-center justify-center w-full mb-16 shadow-sm  rounded-sm">
+          <div className="p-2 inline-flex items-center justify-center w-full mb-2 shadow-sm  rounded-sm">
               <a href="https://medfitpaulista.com.br/" target="_blank">
                 <img src="/imgs/logo.png" className="w-64"></img>
               </a>
           </div>
-          <div className="md:w-12/12 lg:w-6/12 mx-auto">            
-            <div className="md:pr-4">            
-              <h1 className="text-5xl font-bold">Descubra seu IMC</h1>
-              <h3 className="text-2xl mt-8 font-bold">Você sabe o seu peso ideal?</h3>
-              <p className="mt-4 text-lg leading-relaxed text-blueGray-500">Entre muitos cuidados que devemos ter com nossa saúde e corpo, um deles é imprescindível: saber e manter o peso ideal. Sendo de grande importância para a promoção da saúde e prevenção de doenças.
-                   Por isso, é importante conhecer seu Índice de Massa Corporal (IMC).</p>
-              <h3 className="text-2xl mt-8 font-medium">Alguns benefícios para a saúde: </h3>
-              <ul className="list-none mt-6">
-                <li className="py-2">
-                  <div className="flex items-center">
-                    <div>
-                      <span
-                        className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200 mr-3"><i
-                          className="fas fa-fingerprint"></i></span></div>
-                    <div>
-                      <h4 className="text-blueGray-500">Aumenta a disposição</h4>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-2">
-                  <div className="flex items-center">
-                    <div><span
-                      className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200 mr-3"><i
-                        className="fab fa-html5"></i></span></div>
-                    <div>
-                      <h4 className="text-blueGray-500">Diminui o Risco de Diabetes</h4>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-2">
-                  <div className="flex items-center">
-                    <div><span
-                      className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200 mr-3"><i
-                        className="far fa-paper-plane"></i></span></div>
-                    <div>
-                      <h4 className="text-blueGray-500">Previne doenças cardiovasculares</h4>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-            </div>
-          </div>
+          <div className="inline-flex items-center justify-center w-full mb-6">    
+          <h1 className="text-5xl font-bold text-center">Descubra seu peso ideal.</h1></div>
+      
           {/* Form imc */}
-          <div id="form" className="bg-white  md:w-6/12 mx-auto lg:w-4/12 md:6/12 shadow-md w-full ">
+          <div id="form" className="bg-blue-50 md:w-6/12 mx-auto lg:w-4/12 md:6/12 shadow-md w-full ">
+            
             <div className="py-8 px-8 rounded-xl">
-              <h1 className="font-medium text-2xl mt-3 text-center">Calculadora IMC</h1>
+              <h1 className="font-medium text-3xl text-center">Calcule o seu IMC</h1>
               <form id="formIMC" action="/resultado" method="POST" className="mt-6">
                 <div className="my-5 text-sm">
                   <label htmlFor="nome" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Nome *</label>
@@ -173,26 +134,34 @@ export default function Home() {
             </div>
           </div>
           {/* fim/end form imc */}
-    
-          
+          <div className="md:w-12/12 lg:w-6/12 mt-6 mx-auto">            
+            <div className="md:pr-1">            
+              
+              <h3 className="text-3xl font-bold">Você sabe qual é o seu peso ideal?</h3>
+              <p className="mt-4 text-lg leading-relaxed text-blueGray-500">Entre muitos cuidados que devemos ter com nossa saúde e corpo, um deles é imprescindível: saber e manter o peso ideal. Sendo de grande importância para a promoção da saúde e prevenção de doenças.
+                   Por isso, é importante conhecer seu Índice de Massa Corporal (IMC).</p>
+             
+              
+              {/* Lista de beneficios */}
+              
+               
+                
+                <div className="md:w-12/12 mt-10 mx-auto my-auto">
+                  <img className="max-w-full rounded-lg shadow-lg" src="/imgs/imc.jpg"></img>
+                </div>
+           
+             
+
+            </div>
+          </div>
         </div>
         {/* part 2 site */}
-        <div class="border-b-2 m-10 border-fuchsia-600"></div>
+        <div className="border-b-2 m-10 border-fuchsia-600"></div>
         <div className="items-center flex flex-wrap ">     
-          <div className="md:w-12/12 lg:w-6/12 mx-auto">            
-            <h2 className="mt-8 text-3xl font-bold">O QUE É O IMC?</h2>
-            <p className="mt-8 text-lg leading-relaxed text-blueGray-500">O índice de massa corporal (IMC) é uma estimativa da gordura corporal com base na altura e no peso. Apesar de não medir a gordura corporal diretamente, a equação do IMC faz uma aproximação, indicando se a pessoa está com um peso insalubre ou saudável. </p>
-            <p className="mt-8 text-lg leading-relaxed text-blueGray-500">Além de adotado pela OMS (Organização Mundial de Saúde), que é usado para o diagnóstico do baixo peso, sobrepeso e da obesidade. 
-                  O IMC pode ser facilmente calculado a partir de dois simples dados: peso e altura. A fórmula é simples:
-            </p>  
-            <div className="shadow-inner mt-12 bg-gray-200 p-4">IMC = peso (em quilos) ÷ altura² (em metros)</div>        
-   
-          </div>
+          
           {/* Form imc */}
      
-          <div className="md:w-12/12 lg:w-4/12 mx-auto mt-16">
-            <img className="max-w-full rounded-lg shadow-lg" src="/imgs/imc.jpg"></img>
-          </div>
+        
           {/* fim/end form imc */}
     
           

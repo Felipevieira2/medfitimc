@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-       'hero-pattern': "url('/imgs/imc.jpg')",
-       'footer-texture': "url('/imgs/imc.jpg')",
-      })
+        'hero-pattern': "url('/imgs/imc.jpg')",
+        'footer-texture': "url('/img/imc.jpg')",
+       })
     }
   },
   variants: {
