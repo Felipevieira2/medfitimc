@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundColor: theme => ({
+         'whatsapp-color': '#25d334'
+      }),
       backgroundImage: theme => ({
         'hero-pattern': "url('/imgs/imc.jpg')",
         'footer-texture': "url('/img/imc.jpg')",
