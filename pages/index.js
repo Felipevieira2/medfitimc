@@ -56,21 +56,25 @@ export default function Home() {
     e.preventDefault();
     console.log(Number(altura) )
     if ( nome == "" || nome.match(/\d+/g) ) {
+      document.getElementById("nome").focus();
       setNomeError({error: true, msg: 'Nome informado inválido'});
       return 
     }
 
     if ( phone == "" || phone.substring(3).match(/^[A-Za-z]+$/) || phone.substring(3).length < 8) {
+      document.getElementById("phone").focus();
       setPhoneError({error: true, msg: 'Telefone informado inválido'});
       return 
     }
 
     if ( altura == "" || Number(altura) <= 0 ) {
+      document.getElementById("altura").focus();
       setAlturaError({error: true, msg: 'Altura informado inválido'});
       return 
     }
 
     if ( peso == "" || Number(peso) <= 0 ) {
+      document.getElementById("peso").focus();
       setPesoError({error: true, msg: 'Peso informado inválido'});
       return 
     }
