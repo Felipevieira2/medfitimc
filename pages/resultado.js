@@ -25,7 +25,7 @@ export default function Resultado() {
   return (
     <div className="bg-gradient-to-r from-blue-100">
       <div className="max-w-5xl flex items-center lg:h-screen flex-wrap  mx-auto lg:my-0">
-        <div className="p-2 inline-flex items-center justify-center w-full shadow-sm  rounded-sm">
+        <div className="inline-flex items-center justify-center w-full shadow-sm  my-6 rounded-sm">
           <a href="https://medfitpaulista.com.br/" target="_blank">
             <img src="/imgs/logo.png" className="w-64"></img>
           </a>
@@ -33,9 +33,9 @@ export default function Resultado() {
         {/* <!--Main Col--> */}
         <div  className="ml-2 mr-2 px-8 lg:w-3/5 h-5/6 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl text-center 
         bg-white opacity-75 lg:mx-0">
-          <div className="p-1 text-center lg:text-left mt-5">
+          <div className="p-1 text-center lg:text-left">
             {/* <!-- Image for mobile view--> */}
-            <h1 className="text-3xl font-bold text-center ">{lead.nome}, o seu IMC é: {lead.imc}</h1>            
+            <h1 className="text-3xl font-bold text-center  my-6">{lead.nome}, o seu IMC é: {lead.imc}</h1>            
             {lead.result == 0 && <div class="shadow-2xl bg-yellow-300 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-2xl mt-4">
               <p className="text-lg font-medium p-2 text-center">{lead.textResult1}</p>
             </div>}
@@ -80,11 +80,11 @@ export default function Resultado() {
           
             </div>
             
-            <div className="w-full lg:hidden md:hidden sm:hidden mb-4">
+            <div className="w-full lg:hidden md:hidden sm:hidden my-6">
               <div className="w-full ">                
                 <button disabled className="disabled w-full lg:hidden sm:hidden md:hidden  justify-center buttonIMC font-bold p-3 rounded inline-flex items-center">                               
                   {/* <svg className="fill-current h-4 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg> */}
-                  <span className="font-size-resultado-veja-abaixo font-semibold text-center ">Veja como perder gordura e ganhar massa abaixo:</span>                  
+                  <span className="font-size-resultado-veja-abaixo font-semibold text-center  ">Veja como perder gordura e ganhar massa abaixo:</span>                  
                 </button>              
               {/* <a href="https://api.whatsapp.com/send?phone=51955081075&text=Olá%21%20medfit" className="float" target="_blank"> */}
               </div>
@@ -98,7 +98,7 @@ export default function Resultado() {
           {/* <!-- Big profile image for side bar (desktop) --> */}
           <p className="hidden md:block text-md text-justify font-semibold">Manter o IMC dentro da classificação ideal, é de extrema importância pois previne doenças como diabetes, colesterol, problemas cardíacos, gordura no fígado, câncer entre outros. Por isso é muito importante fazer exames regularmente e manter uma alimentação saudável.</p><br className="hidden md:block"></br>
           <p className="hidden md:block text-md text-justify font-semibold">A medfit conta com um processo de emagrecimento com acompanhamento de médicos, e nutricionistas onde você realiza todos os exames clínicos sem pagar nada por isso. Tudo utilizando seu convênio via reembolso.</p><br className="hidden md:block"></br>
-          <p className="lg:hidden font-size-resultado text-justify font-bold">Manter o IMC dentro da classificação ideal, é de extrema importância pois previne doenças como diabetes, colesterol, problemas cardíacos, gordura no fígado, câncer entre outros. Por isso é muito importante fazer exames regularmente e manter uma alimentação saudável.</p><br className="lg:hidden"></br>
+          <p className="lg:hidden font-size-resultado text-justify font-bold mt-3">Manter o IMC dentro da classificação ideal, é de extrema importância pois previne doenças como diabetes, colesterol, problemas cardíacos, gordura no fígado, câncer entre outros. Por isso é muito importante fazer exames regularmente e manter uma alimentação saudável.</p><br className="lg:hidden"></br>
           <p className="lg:hidden font-size-resultado text-justify font-bold">A medfit conta com um processo de emagrecimento com acompanhamento de médicos, e nutricionistas onde você realiza todos os exames clínicos sem pagar nada por isso. Tudo utilizando seu convênio via reembolso.</p><br className="lg:hidden"></br>
           {/* 
             <button className="bg-whatsapp-color hover:bg-grey font-bold py-2 px-4 rounded inline-flex items-center">
