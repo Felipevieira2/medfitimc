@@ -82,7 +82,7 @@ export default function Resultado() {
       </div>
 
       {/* <!--Img Col--> */}
-      <div className="w-full p-6 mr-4 ml-4 mt-4  lg:w-2/5 rounded-lg  lg:rounded-l-lg lg:rounded-r-none shadow-3xl bg-gray-200 opacity-75 mx-6 lg:mx-0">
+      <div className="w-full p-6 mr-4 ml-4  lg:w-2/5 rounded-lg  lg:rounded-l-lg lg:rounded-r-none shadow-3xl bg-gray-200 opacity-75 mx-6 lg:mx-0">
         {/* <!-- Big profile image for side bar (desktop) --> */}
         <p className="text-md text-left">Manter o IMC dentro da classificação ideal, é de extrema importância pois previne doenças como diabetes, colesterol, problemas cardíacos, gordura no fígado, câncer entre outros. por isso é muito importante fazer exames regularmente e manter uma alimentação saudável.
                     </p><br></br>
