@@ -202,8 +202,8 @@ export default function Home() {
              
                 <button onClick={ 
                   (e) => { onPressSubmit(e) } 
-                  } type="button" className="block  text-center text-white bg-calcular p-3 mt-12 duration-300 rounded-sm hover:bg-red w-full">
-                  <span className="font-bold text-lg">Calcular</span>
+                  } type="button" className="block  text-center text-white bg-calcular hover:bg-green-500 p-4 mt-12 duration-300 rounded-sm hover:bg-red w-full">
+                  <span className="font-bold text-xl">Calcular</span>
                 </button>
               </form>
               <div className="flex justify-end mt-8 w-full  rounded-xl ">              
@@ -239,17 +239,14 @@ export default function Home() {
          
         </div>
         {/* part 2 site */}
-      
-        <div className="border-b-2 m-10 border-fuchsia-600"></div>
-        <div className="items-center flex flex-wrap ">     
-          
-          {/* Form imc */}
-     
+        <a  className="lg:hidden block" href="#form">
+          <button className="lg:hidden block  text-center text-white bg-calcular hover:bg-green-500  p-4 mt-6 duration-300 rounded-sm hover:bg-red w-full">
+            <span className="font-bold  text-xl ">Calcular</span>
+          </button>
+        </a>
         
-          {/* fim/end form imc */}
-    
-          
-        </div>
+        <div className="border-b-2 m-4 border-fuchsia-600"></div>
+        
       </div>
     </div>
   )
