@@ -114,7 +114,7 @@ export default function Home() {
       result
     };   
 
-    //await postLead(newLead);
+    await postLead(newLead);
 
     window.localStorage.setItem('lead', JSON.stringify(newLead));
     
