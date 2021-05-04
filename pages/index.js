@@ -7,22 +7,29 @@ import axios from 'axios'
 
 export default function Home() {
   const [nome, setNome ] = React.useState(''); 
+  const [nomeError, setNomeError ] = React.useState({error: false, msg: ''}); 
   const [phone, setPhone ] = React.useState('');
+  const [phoneError, setPhoneError ] = React.useState({error: false, msg: ''}); 
   const [altura, setAltura ] = React.useState('');
+  const [alturaError, setAlturaError ] = React.useState({error: false, msg: ''}); 
   const [peso, setPeso ] = React.useState('');
+  const [pesoError, setPesoError ] = React.useState({error: false, msg: ''}); 
   const router = useRouter();
 
   useEffect(() => {
-   
+    setNomeError({error: false, msg: ''});
+    setPhoneError({error: false, msg: ''});
+    setAlturaError({error: false, msg: ''});
+    setPesoError({error: false, msg: ''});
+
     if ( window.localStorage.getItem('lead') ){
       window.localStorage.removeItem('lead') 
     }   
 
-  }, [])
+  }, [nome, phone, altura, peso])
 
   const postLead =  async (lead) => {
-    let url = "https://medfit.bitrix24.com.br/rest/1/jv899bxkerqprws2/crm.lead.add" 
-	
+    let url = "https://medfit.bitrix24.com.br/rest/1/jv899bxkerqprws2/crm.lead.add" 	
     let params = `?FIELDS[TITLE]=${lead.nome}   
     &FIELDS[PHONE][0][VALUE]=${lead.phone}
     &FIELDS[UF_CRM_1587994360221]=${'Lead IMC'}
@@ -47,7 +54,28 @@ export default function Home() {
 
   const onPressSubmit = async (e) => {
     e.preventDefault();
-    
+    console.log(Number(altura) )
+    if ( nome == "" || nome.match(/\d+/g) ) {
+      setNomeError({error: true, msg: 'Nome informado inválido'});
+      return 
+    }
+
+    if ( phone == "" || phone.substring(3).match(/^[A-Za-z]+$/) || phone.substring(3).length < 8) {
+      setPhoneError({error: true, msg: 'Telefone informado inválido'});
+      return 
+    }
+
+    if ( altura == "" || Number(altura) <= 0 ) {
+      setAlturaError({error: true, msg: 'Altura informado inválido'});
+      return 
+    }
+
+    if ( peso == "" || Number(peso) <= 0 ) {
+      setPesoError({error: true, msg: 'Peso informado inválido'});
+      return 
+    }
+
+
     var imc = Number((peso.replace(',', '.') / (altura.replace(',', '.') * altura.replace(',', '.'))) ).toFixed(2);
     let textResult1 = '';
     let textResult2 = '';
@@ -108,19 +136,20 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-center">Descubra seu peso ideal.</h1></div>
       
           {/* Form imc */}
-          <div id="form" className="bg-blue-50 md:w-6/12 mx-auto lg:w-4/12 md:6/12 shadow-md w-full ">
-            
+          <div id="form" className="bg-blue-50 md:w-6/12 mx-auto lg:w-4/12 md:6/12 shadow-md w-full ">            
             <div className="py-8 px-8 rounded-xl">
               <h1 className="font-medium text-3xl text-center">Calcule o seu IMC</h1>
               <form id="formIMC" action="/resultado" method="POST" className="mt-6">
                 <div className="my-5 text-sm">
-                  <label htmlFor="nome" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Nome *</label>
+                  <label htmlFor="nome" className="block mb-2 text-sm text-gray-600 dark:text-gray-400 ">Nome *</label>
                   <input type="text" autoFocus="" id="nome" 
                     onChange={(e) => { 
                       setNome(e.target.value);                                           
                      }}
-                    required className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+
+                    className={`w-full px-3 py-2 placeholder-gray-300 border ${nomeError.error ? 'border-red-600' : 'border-gray-300 '}  border-2rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500`}
                     placeholder="Nome" />
+                    <label htmlFor="nome" className="block mb-2 font-thin text-xs text-red-600 dark:text-gray-400 ">{nomeError.msg}</label>
                 </div>
                 <div className="my-5 text-sm">
                   <label htmlFor="phone" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Telefone *</label>
@@ -131,9 +160,9 @@ export default function Home() {
                       e.target.value = e.target.value.replace(/^(\d{2})(\d)/, "$1-$2")
                       setPhone(e.target.value); 
                     }}
-                    required className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                    className={`w-full px-3 py-2 placeholder-gray-300 border ${phoneError.error ? 'border-red-600' : 'border-gray-300 '}  border-2rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500`}
                     placeholder="Telefone"/>
-
+                    <label  className="block mb-2 font-thin text-xs text-red-600 dark:text-gray-400 ">{phoneError.msg}</label>
                 </div>
                 <div className="text-sm">
                   <label htmlFor="altura" className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Altura (ex.: 1,70) *</label>
@@ -145,8 +174,9 @@ export default function Home() {
                       e.target.value = e.target.value.replace(/(?=(\d{3})+(\D))\B/g, ".");
                       setAltura(e.target.value);
                     }}
-                    required type="tel" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                    type="tel" className={`w-full px-3 py-2 placeholder-gray-300 border ${alturaError.error ? 'border-red-600' : 'border-gray-300 '}  border-2rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500`}
                     placeholder="Altura" />
+                    <label  className="block mb-2 font-thin text-xs text-red-600 dark:text-gray-400 ">{alturaError.msg}</label>
                 </div>
                 <div className="my-5 text-sm">
                   <label htmlFor="phone"
@@ -158,8 +188,9 @@ export default function Home() {
                     e.target.value = e.target.value.replace(/(?=(\d{3})+(\D))\B/g, "$1,$2");
                     setPeso(e.target.value);
                   }}
-                    required type="tel" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                    placeholder="peso" />
+                    type="tel" className={`w-full px-3 py-2 placeholder-gray-300 border ${pesoError.error ? 'border-red-600' : 'border-gray-300 '}  border-2rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500`}
+                    placeholder="Altura" />
+                    <label  className="block mb-2 font-thin text-xs text-red-600 dark:text-gray-400 ">{pesoError.msg}</label>
                 </div>
                 <button onClick={ 
                   (e) => { onPressSubmit(e) } 
