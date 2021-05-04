@@ -52,10 +52,10 @@ export default function Resultado() {
                 <tbody>
                   <tr className={ lead.result == 0 ? "imcSelect" : "bg-white"}>
                     <td className="border text-md ">{'Menor que 18,5'}</td>
-                    <td className="border px-4 py-2 text-md">Magreza</td>
+                    <td className="border px-4 py-2 text-md">Abaixo do peso</td>
                   </tr>
                   <tr className={ lead.result == 1 ? "imcSelect" : "bg-white"}>
-                    <td className="border text-md">Entre 18,5 E 24,90</td>
+                    <td className="border text-md">Entre 18,5 e 24,90</td>
                     <td className="border px-4 py-2 text-md">Normal</td>
                   </tr>
                   <tr className={ lead.result == 2 ? "imcSelect" : "bg-white"}>
