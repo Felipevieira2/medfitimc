@@ -33,20 +33,20 @@ export default function Resultado() {
         {/* <!--Main Col--> */}
         <div  className="ml-2 mr-2 px-8 lg:w-3/5 h-5/6 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl text-center 
         bg-white opacity-75 lg:mx-0">
-          <div className="p-3 text-center lg:text-left mt-5">
+          <div className="p-1 text-center lg:text-left mt-5">
             {/* <!-- Image for mobile view--> */}
             <h1 className="text-3xl font-bold text-center ">{lead.nome}, o seu IMC é: {lead.imc}</h1>            
-            {lead.result == 0 && <div class="shadow-2xl bg-yellow-300 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-1xl mt-4">
-              <p className="text-lg font-medium p-3 text-center">{lead.textResult1}</p>
+            {lead.result == 0 && <div class="shadow-2xl bg-yellow-300 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-2xl mt-4">
+              <p className="text-lg font-medium p-2 text-center">{lead.textResult1}</p>
             </div>}
-            {lead.result == 1 && <div class="shadow-2xl bg-green-200 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-1xl mt-4">
-              <p className="text-lg font-medium p-3 text-center">{lead.textResult1}</p>
+            {lead.result == 1 && <div class="shadow-2xl bg-green-200 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-2xl mt-4">
+              <p className="text-lg font-medium p-2 text-center">{lead.textResult1}</p>
             </div>}
-            {lead.result == 2 && <div class="shadow-2xl bg-red-300 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-1xl mt-4">
-              <p className="text-lg font-medium p-3 text-center">{lead.textResult1}</p>
+            {lead.result == 2 && <div class="shadow-2xl bg-red-300 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-2xl mt-4">
+              <p className="text-lg font-medium p-2 text-center">{lead.textResult1}</p>
             </div>}
-            {lead.result == 3 && <div class="shadow-2xl bg-red-500 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-1xl mt-4">
-              <p className="text-lg font-medium p-3 text-center">{lead.textResult1}</p>
+            {lead.result == 3 && <div class="shadow-2xl bg-red-500 ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded-2xl mt-4">
+              <p className="text-lg font-medium p-2 text-center">{lead.textResult1}</p>
             </div>}
             <br></br>
             
@@ -100,18 +100,18 @@ export default function Resultado() {
           <p className="hidden md:block text-md font-bold">A medfit conta com um processo de emagrecimento com acompanhamento de médicos, e nutricionistas onde você realiza todos os exames clínicos sem pagar nada por isso. Tudo utilizando seu convênio via reembolso.</p>
           <p className="lg:hidden sm:hidden font-size-resultado text-justify font-bold">Manter o IMC dentro da classificação ideal, é de extrema importância pois previne doenças como diabetes, colesterol, problemas cardíacos, gordura no fígado, câncer entre outros. Por isso é muito importante fazer exames regularmente e manter uma alimentação saudável.</p><br></br>
           <p className="lg:hidden md:hidden sm:hidden font-size-resultado text-justify font-bold">A medfit conta com um processo de emagrecimento com acompanhamento de médicos, e nutricionistas onde você realiza todos os exames clínicos sem pagar nada por isso. Tudo utilizando seu convênio via reembolso.</p>
-          {/* <div className="w-full flex mt-5">
+          {/* 
             <button className="bg-whatsapp-color hover:bg-grey font-bold py-2 px-4 rounded inline-flex items-center">
-              <svg className="h-4 space-x-6 fill-current  cursor-pointer hover:text-green-700" role="img" viewBox="0 0 24 24" className="fill-current h-4 text-brand hover:text-teal" xmlns="http://www.w3.org/2000/svg">            
+              <svg className="h-4 space-x-6 fill-current<div className="w-full flex mt-5">  cursor-pointer hover:text-green-700" role="img" viewBox="0 0 24 24" className="fill-current h-4 text-brand hover:text-teal" xmlns="http://www.w3.org/2000/svg">            
                 <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"></path>
               </svg>
             
               <span >WhatsApp </span>
         
             </button>
-          </div> */}
-          <span className="lg:hidden sm:hidden font-size-resultado text-justify font-bold">Clique no botão abaixo e descubra como você pode emagrecer de 5 a 10kg nas próximas semanas com nosso acompanhamento</span>
-          <span className="hidden md:block text-md text-justify font-bold">Clique no botão abaixo e descubra como você pode emagrecer de 5 a 10kg nas próximas semanas com nosso acompanhamento</span>
+          </div> */}<br></br>
+          <p className="lg:hidden sm:hidden font-size-resultado text-justify font-bol">Clique no botão abaixo e descubra como você pode emagrecer de 5 a 10kg nas próximas semanas com nosso acompanhamento</p>
+          <p className="hidden md:block text-md text-justify font-bold">Clique no botão abaixo e descubra como você pode emagrecer de 5 a 10kg nas próximas semanas com nosso acompanhamento</p>
           {/* Mobile start */}
           <div className="lg:hidden mr-auto ml-auto mt-5 w-full">
             <div className="w-full text-white ">          

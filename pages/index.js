@@ -93,15 +93,15 @@ export default function Home() {
       result = 1;
       textResult1 = "Parabens! Você está no seu peso ideal.";
       // textResult2 = "De acordo com as informações passadas, o seu peso pode variar entre 67 kg e 90 kg. "
-    }else if( imc >= 25  && imc <= 29.9 ) {
+    }else if( imc > 24.9  && imc <= 29.9 ) {
       result = 2;
       textResult1 = "Seu IMC indica sobrepeso.";
       // textResult2 = "O seu peso ideal pode variar entre 67 kg e 90 kg por isso para emagrecer com saúde é importante comer mais frutas e verduras além de praticar exercício físico entre 2 e 3 vezes por semana, ingerindo 3035 calorias por dia"
-    }else if( imc >= 30.0 && imc <= 39.9 ) {
+    }else if( imc > 29.9 && imc <= 39.9 ) {
       result = 3;
       textResult1 = "Seu IMC indica obesidade.";  
       // textResult2 = "Você deve ainda falar com seu médico para fazer exames de sangue para saber se o seu colesterol e triglicerídeos estão bem. Um nutricionista também pode te ajudar a emagrecer comendo bem, mas além da dieta é também importante fazer exercícios físicos bem orientado por um preparador físico para emagrecer mais rápido."    
-    }else {
+    }else if( imc > 39.9 )  {
       textResult1 = "Seu IMC indica obesidade de grau elevado.";  
       result = 3;
     }
