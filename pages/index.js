@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React, { useCallback, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import axios from 'axios'
 
 
 export default function Home() {
@@ -19,8 +20,32 @@ export default function Home() {
 
   }, [])
 
+  const postLead =  async (lead) => {
+    let url = "https://medfit.bitrix24.com.br/rest/1/jv899bxkerqprws2/crm.lead.add" 
+	
+    let params = `?FIELDS[TITLE]=${lead.nome}   
+    &FIELDS[PHONE][0][VALUE]=${lead.phone}
+    &FIELDS[UF_CRM_1587994360221]=${'Lead IMC'}
+    &FIELDS[SOURCE_ID]=WEB`
 
-  const onPressSubmit = (e) => {
+    axios({
+      method: "get",
+      url: url+params,
+      data: null,
+      headers: { "Content-Type": "multipart/form-data" },
+    })
+    .then(function (response) {
+      //handle success
+      console.log(response);
+    })
+    .catch(function (response) {
+      //handle error
+      console.log(response);
+    });
+
+  }
+
+  const onPressSubmit = async (e) => {
     e.preventDefault();
     
     var imc = Number((peso.replace(',', '.') / (altura.replace(',', '.') * altura.replace(',', '.'))) ).toFixed(2);
@@ -57,6 +82,8 @@ export default function Home() {
       textResult2,
       result
     };   
+
+    await postLead(newLead);
 
     window.localStorage.setItem('lead', JSON.stringify(newLead));
     
