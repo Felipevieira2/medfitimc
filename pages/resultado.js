@@ -26,14 +26,14 @@ export default function Resultado() {
     <div className="bg-gradient-to-r from-blue-100">
 
     
-    <div className="max-w-5xl flex items-center lg:h-screen flex-wrap  lg:my-0">
+    <div className="max-w-5xl flex items-center lg:h-screen flex-wrap  mx-auto lg:my-0">
       <div className="p-2 inline-flex items-center justify-center w-full shadow-sm  rounded-sm">
         <a href="https://medfitpaulista.com.br/" target="_blank">
           <img src="/imgs/logo.png" className="w-64"></img>
         </a>
       </div>
       {/* <!--Main Col--> */}
-      <div id="profile" className="mr-4 ml-4 mt-10 lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl text-center 
+      <div id="profile" className="ml-4 mr-4 py-4 px-8 my-20 mt-10 lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl text-center 
       bg-white opacity-75 lg:mx-0">
         <div className="p-6 md:p-12 text-center lg:text-left ">
           {/* <!-- Image for mobile view--> */}
