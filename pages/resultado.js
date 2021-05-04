@@ -68,7 +68,7 @@ export default function Resultado() {
                     <td className="border px-4 py-2 text-md">Normal</td>
                   </tr>
                   <tr className={ lead.result == 2 ? "bg-red-300 " : "bg-white"}>
-                    <td className="border px-4 py-2 text-md">Entre 25,0 e 29,9</td>
+                    <td className="border px-4 py-2 text-md">Entre 24,91 e 29,9</td>
                     <td className="border px-4 py-2 text-md">Sobrepeso</td>
                   </tr>                  
                   <tr className={ lead.result == 3 ? "bg-red-500" : "bg-white"}>
