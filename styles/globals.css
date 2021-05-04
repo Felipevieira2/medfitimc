@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+.bg-calcular {
+   background-color: green;
+}
+
 .font-size-resultado {
    font-size: 1.1rem;
 }
@@ -24,7 +28,7 @@ a {
   color: black;
 }
 
-.button-veja-abaixo {
+.buttonIMC-veja-abaixo {
   background-color: #e5ed05;
 }
 
@@ -34,4 +38,61 @@ a {
 
 .imcSelect {
   background-color: #94f2c3;
+}
+
+.buttonIMC {
+  background-color: #c7e03a;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@-webkit-keyframes glowing {
+  0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
+  15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
+  30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
+  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
+  100% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
+  15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
+  30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
+  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
+  100% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
+  15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
+  30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
+  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
+  100% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+}
+
+@keyframes glowing {
+  0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
+  30% { background-color: #f1efaf; box-shadow: 0 0 3px #f1efaf; }
+  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
+  100% { background-color: #ebe534; box-shadow: 0 0 3px #ebe534; }
+}
+
+.buttonIMC {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
 }

@@ -91,7 +91,7 @@ export default function Home() {
     }
     if( imc >= 18.5 && imc <= 24.9 ) {
       result = 1;
-      textResult1 = "Parabens! Você está no seu peso ideal.";
+      textResult1 = "Parabéns! Você está no seu peso ideal.";
       // textResult2 = "De acordo com as informações passadas, o seu peso pode variar entre 67 kg e 90 kg. "
     }else if( imc > 24.9  && imc <= 29.9 ) {
       result = 2;
@@ -199,10 +199,11 @@ export default function Home() {
                     placeholder="Altura" />
                     <label  className="block mb-2 font-thin text-xs text-red-600 dark:text-gray-400 ">{pesoError.msg}</label>
                 </div>
+             
                 <button onClick={ 
                   (e) => { onPressSubmit(e) } 
-                  } type="button" className="block text-center text-white bg-gray-800 p-3 mt-12 duration-300 rounded-sm hover:bg-black w-full">
-                  Calcular
+                  } type="button" className="block  text-center text-white bg-calcular p-3 mt-12 duration-300 rounded-sm hover:bg-red w-full">
+                  <span className="font-bold text-lg">Calcular</span>
                 </button>
               </form>
               <div className="flex justify-end mt-8 w-full  rounded-xl ">              

@@ -82,7 +82,7 @@ export default function Resultado() {
             
             <div className="w-full lg:hidden md:hidden sm:hidden mb-4">
               <div className="w-full ">                
-                <button className="disabled w-full animate-pulse lg:hidden sm:hidden md:hidden  justify-center button-veja-abaixo  hover:text-green-700 text-red font-bold p-3 rounded inline-flex items-center">                               
+                <button disabled className="disabled w-full lg:hidden sm:hidden md:hidden  justify-center buttonIMC font-bold p-3 rounded inline-flex items-center">                               
                   {/* <svg className="fill-current h-4 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg> */}
                   <span className="font-size-resultado-veja-abaixo font-semibold text-center ">Veja como perder gordura e ganhar massa abaixo:</span>                  
                 </button>              
