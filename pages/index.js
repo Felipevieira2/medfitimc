@@ -79,7 +79,6 @@ export default function Home() {
       return 
     }
 
-
     var imc = Number((peso.replace(',', '.') / (altura.replace(',', '.') * altura.replace(',', '.'))) ).toFixed(2);
     let textResult1 = '';
     let textResult2 = '';
@@ -137,7 +136,8 @@ export default function Home() {
               </a>
           </div>
           <div className="inline-flex items-center justify-center w-full mb-6">    
-          <h1 className="text-5xl font-bold text-center">Descubra seu peso ideal.</h1></div>
+            <h1 className="text-5xl mt-6 mb-3 font-bold text-center">Descubra seu peso ideal.</h1>
+          </div>
       
           {/* Form imc */}
           <div id="form" className="bg-blue-50 md:w-6/12 mx-auto lg:w-4/12 md:6/12 shadow-md w-full ">            
