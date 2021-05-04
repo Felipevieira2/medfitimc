@@ -13,6 +13,16 @@ a {
   text-decoration: none;
 }
 
+.font-size-resultado {
+   font-size: 1.1rem;
+}
+
+.font-size-resultado-veja-abaixo {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-top: 0.5rem;
+}
+
 * {
   box-sizing: border-box;
 }
