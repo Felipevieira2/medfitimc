@@ -59,35 +59,41 @@ a {
   0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
   15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
   30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
-  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  50% { background-color: #eee953; box-shadow: 0 0 3px #ebe893; }
   70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
-  100% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  80% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  100% { background-color: #fff70d; box-shadow: 0 0 3px #fff70d; }
 }
 
 @-moz-keyframes glowing {
   0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
   15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
   30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
-  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  50% { background-color: #eee953; box-shadow: 0 0 3px #ebe893; }
   70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
-  100% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  80% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  100% { background-color: #fff70d; box-shadow: 0 0 3px #fff70d; }
+  
 }
 
 @-o-keyframes glowing {
   0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
   15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
   30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
-  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  50% { background-color: #eee953; box-shadow: 0 0 3px #ebe893; }
   70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
-  100% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  80% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  100% { background-color: #fff70d; box-shadow: 0 0 3px #fff70d; }
 }
 
 @keyframes glowing {
   0% { background-color: #f7f4c3; box-shadow: 0 0 3px #f7f4c3; }
-  30% { background-color: #f1efaf; box-shadow: 0 0 3px #f1efaf; }
-  50% { background-color: #ebe893; box-shadow: 0 0 3px #ebe893; }
+  15% { background-color: #e9e7b8; box-shadow: 0 0 3px #e9e7b8; }
+  30% { background-color: #f8f5a9; box-shadow: 0 0 3px #f8f5a9; }
+  50% { background-color: #eee953; box-shadow: 0 0 3px #ebe893; }
   70% { background-color: #f3ed3d; box-shadow: 0 0 3px #f3ed3d; }
-  100% { background-color: #ebe534; box-shadow: 0 0 3px #ebe534; }
+  80% { background-color: #f5ee26; box-shadow: 0 0 3px #f5ee26; }
+  100% { background-color: #fff70d; box-shadow: 0 0 3px #fff70d; }
 }
 
 .buttonIMC {
