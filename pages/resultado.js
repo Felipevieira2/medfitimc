@@ -80,11 +80,11 @@ export default function Resultado() {
           
             </div>
             
-            <div className="w-full lg:hidden md:hidden sm:hidden my-6">
-              <div className="w-full ">                
+            <div className="w-full lg:hidden md:hidden sm:hidden my-6 border-4 border-black">
+              <div className="w-full  ">                
                 <button disabled className="disabled w-full lg:hidden sm:hidden md:hidden  justify-center buttonIMC font-bold p-3 rounded inline-flex items-center">                               
                   {/* <svg className="fill-current h-4 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg> */}
-                  <span className="font-size-resultado-veja-abaixo font-semibold text-center  ">Veja como perder gordura e ganhar massa abaixo:</span>                  
+                  <span className="font-size-resultado-veja-abaixo font-semibold text-center">VEJA ABAIXO COMO ATINGIR O SEU PESO IDEAL</span>                  
                 </button>              
               {/* <a href="https://api.whatsapp.com/send?phone=51955081075&text=Olá%21%20medfit" className="float" target="_blank"> */}
               </div>
