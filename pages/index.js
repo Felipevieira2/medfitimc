@@ -186,13 +186,14 @@ export default function Home() {
                     <label  className="block mb-2 font-thin text-xs text-red-600 dark:text-gray-400 ">{alturaError.msg}</label>
                 </div>
                 <div className="my-5 text-sm">
-                  <label htmlFor="phone"
-                   className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Peso (ex.: 69,2) *</label>
-                  <input type="text" id="peso" maxLength="6"
-                    onChange={(e) => {                                    
-                    e.target.value = e.target.value.replace(/\D/g, "");
-                    e.target.value = e.target.value.replace(/(\d)(\d{2})$/, "$1,$2");
-                    e.target.value = e.target.value.replace(/(?=(\d{3})+(\D))\B/g, "$1,$2");
+                  <label htmlFor="peso"
+                   className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Peso (ex.: 88,70) *</label>
+                  <input  type="text" autoFocus="" id="peso" maxLength="6"
+                    onChange={(e) => {               
+                      ///[^\d|\-+|\.+]/g https://regexper.com/                     
+                    e.target.value = e.target.value.replace(/[^\d\,]/g, "");
+                    // e.target.value = e.target.value.replace(/(\d)(\d{2})$/, "$1,$2");
+                    // e.target.value = e.target.value.replace(/(?=(\d{3})+(\D))\B/g, "$1,$2");
                     setPeso(e.target.value);
                   }}
                     type="tel" className={`w-full px-3 py-2 placeholder-gray-300 border ${pesoError.error ? 'border-red-600' : 'border-gray-300 '}  border-2rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500`}
