@@ -24,14 +24,14 @@ export default function Resultado() {
   }
   return (
     <div className="bg-gradient-to-r from-blue-100">
-      <div className="max-w-5xl flex items-center lg:h-screen flex-wrap  mx-auto lg:my-0">
+      <div className="container flex flex-wrap px-4 md:px-0 max-w-6xl mx-auto">
         <div className="inline-flex items-center justify-center w-full shadow-sm  my-6 rounded-sm">
           <a href="https://medfitpaulista.com.br/" target="_blank">
             <img src="/imgs/logo.png" className="w-64"></img>
           </a>
         </div>
         {/* <!--Main Col--> */}
-        <div  className="ml-2 mr-2 px-8 lg:w-3/5 h-5/6 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl text-center 
+        <div  className="px-8 lg:w-3/6 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl text-center 
         bg-white opacity-75 lg:mx-0">
           <div className="p-1 text-center lg:text-left">
             {/* <!-- Image for mobile view--> */}
@@ -51,7 +51,7 @@ export default function Resultado() {
             <br></br>
             
             <div className=" ">
-              <table className="table-responsive ml-auto mr-auto text-center mb-2 lg:w-4/5 rounded">
+              <table className="table-responsive ml-auto mr-auto text-center mb-4 lg:w-4/5 rounded">
                 <thead>
                   <tr>
                     <th className="border w-2/6 px-4 py-2 border-b bg-black text-white">IMC</th>
@@ -94,7 +94,7 @@ export default function Resultado() {
         </div>
 
         {/* <!--Img Col--> */}
-        <div className="w-full p-4 mr-4 ml-4 lg:w-2/5 rounded-lg  lg:rounded-l-lg lg:rounded-r-none shadow-3xl bg-gray-200 opacity-75 mx-6 lg:mx-0">
+        <div className="p-4  lg:w-3/6 rounded-lg  lg:rounded-l-lg lg:rounded-r-none shadow-3xl bg-gray-200 opacity-75">
           {/* <!-- Big profile image for side bar (desktop) --> */}
           <div id="responsiveVideoWrapper" className="relative h-0 pb-fluid-video mb-10">
             <iframe
@@ -137,6 +137,18 @@ export default function Resultado() {
                 </button></a>
               {/* <a href="https://api.whatsapp.com/send?phone=51955081075&text=Olá%21%20medfit" className="float" target="_blank"> */}
             </div>
+            <br></br>
+            <p className="lg:hidden sm:hidden font-size-resultado text-justify font-bold">DEPOIMENTO DE NOSSA PACIENTE GABRIELA</p>
+            <p className="hidden md:block text-md text-justify font-bold">DEPOIMENTO DE NOSSA PACIENTE GABRIELA</p>
+            
+            <div id="responsiveVideoWrapper" className="relative h-0 pb-fluid-video my-5">                
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/fUH92xqeAtQ"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
             <div className="flex justify-end mt-5">
               <a className="link mx-6 " target="_blank" href="https://www.facebook.com/medfitpaulista/" data-tippy-content="@facebook_handle"><svg className="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Facebook</title>
@@ -152,9 +164,9 @@ export default function Resultado() {
             </div>
           </div>
           {/* Mobile end */}
-          <div className="w-full  mr-auto ml-auto mt-5 hidden md:block">
-            <div className="w-full text-white flex justify-center ">
-          
+         
+          <div className="w-full  mr-auto ml-auto mt-3 hidden md:block">
+            <div className="w-full text-white flex justify-center ">          
               <a href="https://api.whatsapp.com/send?phone=5511972330763&text=Olá%21%20medfit"
                 className="float" target="_blank"> 
                 <button className=" bg-whatsapp-color  hover:text-green-700 text-white font-bold py-3 px-4 rounded inline-flex items-center">
@@ -168,7 +180,19 @@ export default function Resultado() {
                 </button></a>
               {/* <a href="https://api.whatsapp.com/send?phone=51955081075&text=Olá%21%20medfit" className="float" target="_blank"> */}
             </div>
-            <div className="flex justify-center mt-5">
+            <br></br>
+            <p className="lg:hidden sm:hidden font-size-resultado text-justify font-bold">DEPOIMENTO DE NOSSA PACIENTE GABRIELA</p>
+            <p className="hidden md:block text-md text-justify font-bold">DEPOIMENTO DE NOSSA PACIENTE GABRIELA</p>
+            
+            <div id="responsiveVideoWrapper" className="relative h-0 pb-fluid-video my-5">                
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/fUH92xqeAtQ"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="flex justify-center">
               <a className="link mx-6 mt-2" target="_blank" href="https://www.facebook.com/medfitpaulista/" data-tippy-content="@facebook_handle"><svg className="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Facebook</title>
                 <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path>
@@ -182,6 +206,7 @@ export default function Resultado() {
               </a>
             </div>
           </div>
+        
           {/* <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A --> */}
         </div>
 
