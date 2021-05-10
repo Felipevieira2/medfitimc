@@ -10,7 +10,8 @@ module.exports = {
       backgroundImage: theme => ({
         'hero-pattern': "url('/imgs/imc.jpg')",
         'footer-texture': "url('/img/imc.jpg')",
-       })
+      }),
+      padding: { "fluid-video": "56.25%" } 
     }
   },
   variants: {
