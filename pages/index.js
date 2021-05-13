@@ -53,7 +53,7 @@ export default function Home() {
 
   const onPressSubmit = async (e) => {
     e.preventDefault();
-    handleClickCalcular();
+    
     console.log(Number(altura) )
     if ( nome == "" || nome.match(/\d+/g) ) {
       document.getElementById("nome").focus();
