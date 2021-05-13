@@ -11,7 +11,7 @@ const FacebookPixel = ({ children }) => {
 
   useEffect(() => {
     // This pageview only trigger first time (it is important for Pixel to have real information)
-    fbq.pageview()
+    fbq.viewpaginaresultado()
 
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
