@@ -21,7 +21,7 @@ export default function Resultado() {
     if (!window.localStorage.getItem('lead')) {
       router.push('/')
     }
-    fbq.event('Lead', {nome: lead.nome, telefone: lead.phone});
+    
   }, []);
 
   const back = () => {
