@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import React, { useCallback, useEffect } from 'react'
+  
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-
+import * as fbq from '../lib/fbPixel'
 
 export default function Home() {
   const [nome, setNome ] = React.useState(''); 
@@ -52,8 +51,13 @@ export default function Home() {
 
   }
 
+  const handleClickCalcular = () => {
+    fbq.event('Purchase', { currency: 'USD', value: 10 })
+  }
+
   const onPressSubmit = async (e) => {
     e.preventDefault();
+    handleClickCalcular();
     console.log(Number(altura) )
     if ( nome == "" || nome.match(/\d+/g) ) {
       document.getElementById("nome").focus();
@@ -126,11 +130,6 @@ export default function Home() {
 
   return (
     <div className="p-4 bg-gradient-to-r from-blue-100">
-      <Head>
-        <title>IMC calculo</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-      </Head>
       <div className="container mx-auto md:px-14">
         <div className="items-center flex flex-wrap">
           <div className="p-2 inline-flex items-center justify-center w-full mb-2 shadow-sm  rounded-sm">
