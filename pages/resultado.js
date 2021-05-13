@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useCallback, useEffect } from 'react'
 import { faWhatsapp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as fbq from '../lib/fbPixel'
 
 export default function Resultado() {
   const [lead, setLead] = React.useState('');
@@ -10,7 +11,7 @@ export default function Resultado() {
   const router = useRouter();
 
   React.useEffect(() => {
-
+    fbq.event('Purchase', { currency: 'USD', value: 10 })
     setLead(JSON.parse(window.localStorage.getItem('lead')))
 
     if (!window.localStorage.getItem('lead')) {

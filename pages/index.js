@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-import * as fbq from '../lib/fbPixel'
+
 
 export default function Home() {
   const [nome, setNome ] = React.useState(''); 
@@ -49,10 +49,6 @@ export default function Home() {
       console.log(response);
     });
 
-  }
-
-  const handleClickCalcular = () => {
-    fbq.event('Purchase', { currency: 'USD', value: 10 })
   }
 
   const onPressSubmit = async (e) => {
